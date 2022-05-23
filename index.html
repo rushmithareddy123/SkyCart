@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+  <title>Sky Nights</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="scale=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Indie+Flower|Satisfy|Amatic+SC" rel="stylesheet">
+</head>
+	<style>
+.header-content {
+  background-image: url(https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 625px;
+  color: #fff;
+}
+img.header-img {
+  margin-bottom: 0px;
+  position: relative;
+  left: 30em;
+  width: 15%;
+}
+.header-content h1 {
+  padding-top: 1em;
+  margin-bottom: 0px;
+  font-family: "Indie Flower", cursive;
+  font-size: 16em;
+}
+.header-content h4 {
+  font-family: "Indie Flower", cursive;
+  padding-top: 0px;
+  font-size: 3em;
+}
+.animated {
+  padding-top: 95px;
+  margin-top: 0;
+  margin-bottom: 60px;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+.navbar {
+  border: none;
+}
+.navbar-brand {
+  font-size: 2em;
+}
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-70%);
+}
+.navbar-left li,
+.navbar-right li {
+  font-size: 1.2em;
+  margin-right: 1em;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-brand:hover {
+  color: lightcoral;
+}
+.navbar-left {
+  margin-left: 14em;
+}
+.navbar-right {
+  margin-right: 16em;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #203040;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 5em;
+}
+div.sidenav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #203040;
+  display: block;
+}
+.sidenav a:hover {
+  color: indianred;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 3em;
+  margin-left: 1em;
+}
+.deliBox {
+  background-image: url(https://images.pexels.com/photos/616412/pexels-photo-616412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20em;
+  height: 700px;
+  box-shadow: 3px 19px 46px -14px rgba(214, 214, 214, 1);
+}
+.subDeliBox {
+  padding-top: 20px;
+}
+.input-group {
+  width: 45em;
+}
+.subDeliBox button {
+  background-color: indianred;
+  color: #fff;
+}
+.meals {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  box-shadow: 3px 19px 46px -14px rgba(214, 214, 214, 1);
+}
+.thumbnail > img {
+  max-height: 200px;
+}
+.meals > .row > .col-md-4 a {
+  text-decoration: none;
+}
+.aboutUs {
+  padding-top: 3em;
+  padding-bottom: 4em;
+  color: #111;
+}
+footer {
+  padding-top: 1em;
+  padding-bottom: 2em;
+  background-color: #111;
+
+  color: #ccc;
+}
+.footer-head h3 {
+  font-size: 2.5em;
+}
+.social-icons a i {
+  margin-right: 0.5em;
+}
+.fa {
+  padding: 1em;
+  font-size: 2px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+.grey,
+.grey:hover {
+  color: #ccc;
+  line-height: 3em;
+}
+hr {
+  width: 65em;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .header-content h1 {
+    font-size: 12em;
+  }
+  img.header-img {
+    left: 27em;
+  }
+  .navbar-left {
+    margin-left: 10em;
+  }
+  .navbar-right {
+    margin-right: 12em;
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .header-content h1 {
+    font-size: 10em;
+  }
+  img.header-img {
+    left: 20em;
+  }
+  .input-group {
+    width: 35em;
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header-content h1 {
+    font-size: 5em;
+  }
+  .header-content h4 {
+    font-size: 1.5em;
+  }
+  img.header-img {
+    left: 11em;
+  }
+  .input-group {
+    width: 23em;
+  }
+  footer {
+    text-align: center;
+  }
+}
+	</style>
+<body>
+  <header>
+    <div class="header-content"> 
+      <h1 class="animated fadeInUp text-center">Sky Nights</h1>
+      <h4 class="animated fadeInUp text-center">Order with Us</h4>
+    </div>
+
+    <nav class="navbar navbar-default navbar-sticky">
+      <br><br>
+      <a class="navbar-brand navbar-center" href="#" style="font-family: 'Satisfy'">>Sky Nights</a><br>
+      <div class="visible-xs sidenav" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <a href="#"><i class="fa fa-home"></i> Home</a>
+        <a href="#"><i class="fa fa-exclamation-circle"></i> About</a>
+		  <a href="#"><i class="fa fa-spoon"></i> Menu</a>
+        
+      </div>
+      <span id="side" class="visible-xs icon menu fa fa-bars"></span>
+      <div class="collapse navbar-collapse hidden-xs">
+        <ul class="nav navbar-nav navbar-left">
+          <br>
+          <li><a href="#">Home</a></li><br>
+          <li><a href="about.html">About</a></li>
+          <br>
+          <li><a href="Menu.html">Menu</a></li><br>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <br>
+          
+          <li><a href="signup.html">Sign up</a></li><br>
+          
+          <li><a href="service.html">To Order Place </a></li><br>
+			<li><a href="login.html">Login</a></li>
+        </ul>
+      
+      </div>+
+    </nav>
+  </header>
+  <div class="main-content">
+    <div class="deliBox container-fluid">
+      <h2 style="font-family: 'Amatic+SC'; ">Discover Restaurants Near You</h2>
+      <div class="subDeliBox input-group input-group-lg">
+        <input type="text" class="form-control" placeholder="Enter Your Delivery Address">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">Find Food</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid meals">
+      <h2 style="font-family: 'Amatic+SC';">Discover By Types Of Meals</h2>
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <a href="#">
+            <div class="thumbnail">
+              <img src=https://images.pexels.com/photos/103124/pexels-photo-103124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 class="img-responsive">
+              <div class="caption text-center">
+                <h4>Breakfast</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <a href="#">
+            <div class="thumbnail">
+              <img src=https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 class="img-responsive">
+              <div class="caption text-center">
+                <h4>Lunch</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <a href="#">
+            <div class="thumbnail">
+              <img src=https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 class="img-responsive">
+              <div class="caption text-center">
+                <h4>Dinner</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <a href="#">
+            <div class="thumbnail">
+              <img src=https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 class="img-responsive">
+              <div class="caption text-center">
+                <h4>Drinks &amp; Nightlife</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <a href="#">
+            <div class="thumbnail">
+              <img src=https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 class="img-responsive">
+              <div class="caption text-center">
+                <h4>Cafes</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <a href="#">
+            <div class="thumbnail">
+              <img src=https://images.pexels.com/photos/954199/pexels-photo-954199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 class="img-responsive">
+              <div class="caption text-center">
+                <h4>Desserts</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="aboutUs container-fluid">
+      <h2 class="text-center" style="font-family: 'Amatic+SC';">About Us</h2>
+      <article>A restaurant is a business formation which prepares and serves food and drink to customers in return for money, either paid before the meal, after the meal, or with a running tab. Meals are generally served and eaten on premises.Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.
+“A commercial establishment where meals are prepared and served to customers.”</article>
+      
+    </div>
+  </div>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="footer-head col-sm-12">
+          <h3 style="font-family:'Indie Flower'">Sky Nights
+			</h3>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="social-icons col-md-4 col-sm-12">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-google"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <ul class="list-unstyled">
+            <li><a href="#" class="grey">About Sky Nights</a></li>
+            <li><a href="#" class="grey">Become Delivery Partner</a></li>
+            <li><a href="#" class="grey">Become Restaurant Partner</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <ul class="list-unstyled">
+            <li><a href="#" class="grey">See All Cities</a></li>
+            <li><a href="#" class="grey">Pricing</a></li>
+            <li><a href="#" class="grey">Help</a></li>
+            <li><a href="#" class="grey">FAQs</a></li>
+            <li><a href="#" class="grey">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <p>&copy; Sky Nights 2020</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <a href="#" class="grey">
+            <p>Privacy</p>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <a href="#" class="grey">
+            <p>Terms</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- partial -->
+	<script>
+ var num = 625;
+$(window).scroll(function() {
+  $(".header-content").css("opacity", 1 - $(window).scrollTop() / 500);
+  if ($(window).scrollTop() > num) {
+    $(".navbar-sticky ").addClass("navbar-fixed-top");
+  } else {
+    $(".navbar-sticky").removeClass("navbar-fixed-top");
+  }
+});
+$(function() {
+  $("#side").click(function() {
+    $("#sidebar").css({ width: "18em" });
+    $(document.body).css({ opacity: "0.7" });
+  });
+});
+$(function() {
+  $(".closebtn").click(function() {
+    $("#sidebar").css("width", "0");
+    $(document.body).css({ opacity: "1" });
+  });
+});
+	</script>
+	</body>
+</html>
